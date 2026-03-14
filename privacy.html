@@ -1,0 +1,653 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Privacy Policy — Gimena / gcraft.com.ar</title>
+    <meta name="description" content="Privacy Policy for gcraft.com.ar and associated mobile applications." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&family=JetBrains+Mono:wght@300;400&display=swap"
+        rel="stylesheet" />
+    <style>
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        :root {
+            --bg: #080808;
+            --surface: #111111;
+            --border: rgba(255, 255, 255, 0.07);
+            --text: #e8e8e8;
+            --muted: #5a5a5a;
+            --accent: #c8f542;
+            --mono: 'JetBrains Mono', monospace;
+            --display: 'Syne', sans-serif;
+        }
+
+        html,
+        body {
+            height: 100%;
+        }
+
+        body {
+            background-color: var(--bg);
+            color: var(--text);
+            font-family: var(--mono);
+            font-weight: 300;
+            font-size: 0.875rem;
+            line-height: 1.9;
+            overflow-x: hidden;
+        }
+
+        body::before {
+            content: '';
+            position: fixed;
+            inset: 0;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+            pointer-events: none;
+            z-index: 0;
+            opacity: 0.6;
+        }
+
+        nav {
+            position: sticky;
+            top: 0;
+            z-index: 10;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.25rem clamp(2rem, 6vw, 6rem);
+            border-bottom: 1px solid var(--border);
+            background: rgba(8, 8, 8, 0.85);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+
+        .nav-logo {
+            font-family: var(--display);
+            font-weight: 800;
+            font-size: 1.1rem;
+            color: var(--text);
+            text-decoration: none;
+            letter-spacing: -0.02em;
+        }
+
+        .nav-logo span {
+            color: var(--accent);
+        }
+
+        .nav-back {
+            font-family: var(--mono);
+            font-size: 0.72rem;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            color: var(--muted);
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            transition: color 0.2s ease;
+        }
+
+        .nav-back:hover {
+            color: var(--accent);
+        }
+
+        main {
+            position: relative;
+            z-index: 1;
+            max-width: 720px;
+            margin: 0 auto;
+            padding: clamp(3rem, 6vw, 5rem) clamp(2rem, 6vw, 3rem) 5rem;
+            animation: fadeIn 0.6s ease forwards;
+        }
+
+        .page-header {
+            margin-bottom: 4rem;
+            padding-bottom: 2.5rem;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .page-label {
+            font-size: 0.68rem;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: var(--accent);
+            margin-bottom: 1.5rem;
+        }
+
+        .page-header h1 {
+            font-family: var(--display);
+            font-weight: 800;
+            font-size: clamp(2rem, 5vw, 3rem);
+            letter-spacing: -0.03em;
+            line-height: 1.05;
+            color: var(--text);
+            margin-bottom: 1.25rem;
+        }
+
+        .page-meta {
+            font-size: 0.75rem;
+            color: var(--muted);
+            letter-spacing: 0.04em;
+        }
+
+        section {
+            margin-bottom: 3rem;
+        }
+
+        h2 {
+            font-family: var(--display);
+            font-weight: 700;
+            font-size: 1rem;
+            letter-spacing: 0.02em;
+            color: var(--text);
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+        }
+
+        h2::before {
+            content: '';
+            display: inline-block;
+            width: 4px;
+            height: 1em;
+            background: var(--accent);
+            border-radius: 2px;
+            flex-shrink: 0;
+        }
+
+        h3 {
+            font-family: var(--display);
+            font-weight: 700;
+            font-size: 0.85rem;
+            color: rgba(232, 232, 232, 0.8);
+            margin: 1.5rem 0 0.6rem;
+            letter-spacing: 0.03em;
+        }
+
+        p {
+            color: rgba(232, 232, 232, 0.65);
+            margin-bottom: 1rem;
+        }
+
+        p:last-child {
+            margin-bottom: 0;
+        }
+
+        ul {
+            list-style: none;
+            color: rgba(232, 232, 232, 0.65);
+            padding-left: 0;
+            margin-bottom: 1rem;
+        }
+
+        ul li {
+            padding-left: 1.25rem;
+            position: relative;
+            margin-bottom: 0.4rem;
+        }
+
+        ul li::before {
+            content: '—';
+            position: absolute;
+            left: 0;
+            color: var(--muted);
+            font-size: 0.75em;
+        }
+
+        a {
+            color: var(--accent);
+            text-decoration: none;
+            border-bottom: 1px solid rgba(200, 245, 66, 0.3);
+            transition: border-color 0.2s ease;
+        }
+
+        a:hover {
+            border-bottom-color: var(--accent);
+        }
+
+        .note {
+            border: 1px solid var(--border);
+            border-left: 3px solid var(--accent);
+            padding: 1rem 1.25rem;
+            border-radius: 2px;
+            background: rgba(200, 245, 66, 0.03);
+            color: rgba(232, 232, 232, 0.5);
+            font-size: 0.8rem;
+            margin: 1rem 0;
+        }
+
+        .note.warn {
+            border-left-color: #f5a623;
+            background: rgba(245, 166, 35, 0.03);
+        }
+
+        footer {
+            position: relative;
+            z-index: 1;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+            padding: 1.5rem clamp(2rem, 6vw, 6rem);
+            border-top: 1px solid var(--border);
+            font-family: var(--mono);
+            font-size: 0.68rem;
+            font-weight: 300;
+            letter-spacing: 0.06em;
+            color: var(--muted);
+        }
+
+        footer a {
+            color: var(--muted);
+            border-bottom: none;
+            transition: color 0.2s ease;
+        }
+
+        footer a:hover {
+            color: var(--accent);
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @media (max-width: 600px) {
+            footer {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav>
+        <a class="nav-logo" href="index.html">Gimena</a>
+        <a class="nav-back" href="index.html">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="m15 18-6-6 6-6" />
+            </svg>
+            Back
+        </a>
+    </nav>
+
+    <main>
+
+        <header class="page-header">
+            <p class="page-label">Legal</p>
+            <h1>Privacy Policy</h1>
+            <p class="page-meta">Last updated: March 14, 2026 &nbsp;·&nbsp; gcraft.com.ar</p>
+        </header>
+
+        <!-- 1. OVERVIEW -->
+        <section>
+            <h2>Overview</h2>
+            <p>
+                This Privacy Policy describes how Gimena ("I", "me", or "my") collects, uses, and
+                discloses information when you use my mobile applications (the "Apps") or visit
+                <strong>gcraft.com.ar</strong> (the "Site").
+            </p>
+            <p>
+                By using the Apps or the Site, you agree to the collection and use of information
+                in accordance with this Privacy Policy.
+            </p>
+        </section>
+
+        <!-- 2. DEFINITIONS -->
+        <section>
+            <h2>Interpretation and Definitions</h2>
+            <p>Words with capitalized initial letters have the meanings defined below. These definitions apply whether
+                the terms appear in singular or plural form.</p>
+            <ul>
+                <li><strong>Application</strong> refers to any mobile app developed and published by me under the
+                    gcraft.com.ar developer account, available on Google Play Store and/or Apple App Store.</li>
+                <li><strong>Activity Data</strong> means fitness and health-related information obtained through
+                    connected third-party platforms, including but not limited to workout activities, GPS routes,
+                    performance statistics, and biometric metrics.</li>
+                <li><strong>Device</strong> means any device that can access the Service, such as a smartphone or
+                    tablet.</li>
+                <li><strong>Personal Data</strong> means any information that relates to an identified or identifiable
+                    individual.</li>
+                <li><strong>Service</strong> refers to the Application and/or the Site.</li>
+                <li><strong>Service Provider</strong> means any third-party company or individual that processes data on
+                    my behalf in order to facilitate or improve the Service.</li>
+                <li><strong>Usage Data</strong> refers to data collected automatically, either generated by the use of
+                    the Service or from the Service infrastructure itself.</li>
+                <li><strong>You</strong> means the individual accessing or using the Service.</li>
+            </ul>
+        </section>
+
+        <!-- 3. DATA COLLECTED -->
+        <section>
+            <h2>Types of Data Collected</h2>
+
+            <h3>Data you provide through third-party authentication</h3>
+            <p>
+                Some Apps allow you to log in using your existing account on a third-party platform
+                (currently <strong>The Movie Database / TMDB</strong> and <strong>Strava</strong>).
+                When you choose to authenticate via one of these platforms, I receive the data
+                that the platform makes available under the permissions you grant. This may include:
+            </p>
+            <ul>
+                <li>Your public profile information (username, display name, profile photo)</li>
+                <li>An access token that allows the App to make requests on your behalf</li>
+                <li>Any additional data within the scope you authorize at login</li>
+            </ul>
+            <p>
+                Authentication is handled entirely through each platform's official OAuth 2.0 flow.
+                I do not receive or store your password for any third-party platform.
+            </p>
+
+            <h3>Activity Data — Strava</h3>
+            <p>
+                Apps that connect to Strava access your activity data via the Strava API, using only
+                the permissions you explicitly grant during the OAuth authorization flow. The data
+                accessed may include:
+            </p>
+            <ul>
+                <li>Athlete profile: name, profile picture, location (city/country level)</li>
+                <li>Activity statistics: distance, duration, pace, elevation, speed</li>
+                <li>Activity type and sport category (e.g., run, ride, swim)</li>
+                <li>GPS route data used to render activity maps within the App</li>
+                <li>Heart rate and other biometric metrics, if present in the activity</li>
+                <li>Weekly or aggregate performance summaries</li>
+            </ul>
+            <div class="note warn">
+                This data is classified as health and fitness data. It is used exclusively to
+                display your own activity information within the App. It is never shared with
+                third parties, used for advertising, or processed for any purpose beyond rendering
+                the features you request.
+            </div>
+            <p>
+                You can revoke the App's access to your Strava data at any time from your
+                Strava account settings under "My Apps."
+            </p>
+
+            <h3>Activity Data — Garmin</h3>
+            <p>
+                Apps that connect to the Garmin Health API access your activity and wellness data
+                via Garmin's official API, using only the permissions you explicitly authorize.
+                Depending on the features available, this may include:
+            </p>
+            <ul>
+                <li>Physical activity records: steps, distance, calories, active minutes</li>
+                <li>Workout and exercise summaries</li>
+                <li>GPS route and movement data from Garmin devices</li>
+                <li>Sleep, heart rate, stress, and other wellness metrics recorded by your device</li>
+                <li>Body composition data, if available on your device</li>
+            </ul>
+            <div class="note warn">
+                Garmin activity and health data is used solely to display your personal fitness
+                information within the App. This data is not sold, shared with third parties,
+                used for advertising, or processed for any purpose other than providing the
+                features you request. I do not retain Garmin activity data beyond the active
+                session unless explicitly required for a feature you have enabled.
+            </div>
+            <p>
+                You can revoke the App's access to your Garmin data at any time from your
+                Garmin Connect account settings.
+            </p>
+
+            <h3>Movie and entertainment data — TMDB</h3>
+            <p>
+                Apps that use The Movie Database (TMDB) API fetch publicly available movie, TV show,
+                and media metadata to display within the App (titles, descriptions, ratings, images).
+                If you are logged in with a TMDB account, the App may also access your watchlist,
+                ratings, or lists as permitted by your account settings. This data is used only
+                to provide the features of the App and is not stored on my servers.
+            </p>
+
+            <h3>Crash Reports — Firebase Crashlytics</h3>
+            <p>
+                The Apps use <strong>Firebase Crashlytics</strong> to help me identify and fix
+                technical errors. When the App crashes, Crashlytics automatically collects:
+            </p>
+            <ul>
+                <li>Crash stack traces and error logs</li>
+                <li>Device model and manufacturer</li>
+                <li>Operating system version</li>
+                <li>App version and build number</li>
+                <li>A randomly generated installation UUID (not linked to your identity)</li>
+                <li>Time and date of the crash event</li>
+            </ul>
+            <p>This data is used solely to diagnose and resolve technical issues.</p>
+
+            <h3>Maps — Google Maps SDK</h3>
+            <p>
+                Some Apps use the Google Maps SDK to display maps and allow address search.
+                This may send your search queries or approximate location — only when you actively
+                interact with map features — to Google's servers. The App does not access or track
+                your location in the background.
+            </p>
+        </section>
+
+        <!-- 4. USE OF DATA -->
+        <section>
+            <h2>Use of Your Data</h2>
+            <p>Data accessed through third-party integrations is used exclusively for the following purposes:</p>
+            <ul>
+                <li>To authenticate your identity and maintain your session within the App</li>
+                <li>To display your personal activity, fitness, and wellness data within the App</li>
+                <li>To render maps and route visualizations from your activity data</li>
+                <li>To display movie, TV, or media information linked to your TMDB account</li>
+                <li>To detect, diagnose, and fix crashes and technical errors (Crashlytics)</li>
+                <li>To provide map display and address search functionality (Google Maps SDK)</li>
+            </ul>
+            <p>
+                I do not use your data for advertising, user profiling, behavioral tracking,
+                selling to third parties, or any form of automated decision-making.
+            </p>
+        </section>
+
+        <!-- 5. DISCLOSURE OF ACTIVITY DATA -->
+        <section>
+            <h2>Disclosure of Activity Data</h2>
+            <p>
+                Activity data obtained from Strava and Garmin — including fitness metrics, GPS routes,
+                health indicators, and biometric data — is treated with the highest level of confidentiality.
+                Specifically:
+            </p>
+            <ul>
+                <li>It is <strong>never sold</strong> to any third party</li>
+                <li>It is <strong>never shared</strong> with advertisers, data brokers, or analytics platforms</li>
+                <li>It is <strong>not used</strong> to build profiles, infer sensitive attributes, or make automated
+                    decisions about you</li>
+                <li>It is <strong>not retained</strong> on external servers beyond what is necessary to render the
+                    feature you requested</li>
+                <li>It is only disclosed to third parties if required by law or in response to a valid legal process
+                </li>
+            </ul>
+            <p>
+                This section is intended to satisfy the activity data disclosure requirements of the
+                Garmin Health API program, the Strava API agreement, and applicable data protection laws.
+            </p>
+        </section>
+
+        <!-- 6. COOKIES -->
+        <section>
+            <h2>Cookies</h2>
+            <p>
+                The Apps do not use cookies. The Site (gcraft.com.ar) does not currently implement
+                any first-party or third-party cookies. If this changes in a future version,
+                this policy will be updated accordingly.
+            </p>
+        </section>
+
+        <!-- 7. THIRD PARTIES -->
+        <section>
+            <h2>Third-Party Services</h2>
+            <p>
+                The Apps integrate with the following third-party services. Each operates under
+                its own privacy terms, which I encourage you to review:
+            </p>
+            <ul>
+                <li><strong>Google LLC</strong> (Firebase Crashlytics, Google Maps SDK) — <a
+                        href="https://policies.google.com/privacy" target="_blank"
+                        rel="noopener noreferrer">policies.google.com/privacy</a></li>
+                <li><strong>Strava Inc.</strong> — <a href="https://www.strava.com/legal/privacy" target="_blank"
+                        rel="noopener noreferrer">strava.com/legal/privacy</a></li>
+                <li><strong>Garmin Ltd.</strong> — <a
+                        href="https://www.garmin.com/en-US/privacy/global-privacy-statement/" target="_blank"
+                        rel="noopener noreferrer">garmin.com/privacy</a></li>
+                <li><strong>The Movie Database (TMDB)</strong> — <a href="https://www.themoviedb.org/privacy-policy"
+                        target="_blank" rel="noopener noreferrer">themoviedb.org/privacy-policy</a></li>
+            </ul>
+            <p>
+                I may also disclose data if required to do so by law or in response to a valid
+                request by public authorities (e.g., a court or government agency).
+            </p>
+        </section>
+
+        <!-- 8. RETENTION -->
+        <section>
+            <h2>Retention of Your Data</h2>
+            <p>
+                I do not maintain a personal database of user information. Data fetched from
+                third-party APIs (Strava, Garmin, TMDB) is used in-session to render App features
+                and is not persistently stored on my infrastructure.
+            </p>
+            <p>
+                Crash report data collected by Firebase Crashlytics is retained by Google for up
+                to 90 days by default. Authentication tokens are stored only on your device and
+                are cleared when you log out.
+            </p>
+        </section>
+
+        <!-- 9. INTERNATIONAL TRANSFERS -->
+        <section>
+            <h2>Transfer of Your Data</h2>
+            <p>
+                By using third-party services (Google, Strava, Garmin, TMDB), your data may be
+                transferred to and processed on servers outside your country, including outside
+                Argentina and the European Economic Area. Each of these providers applies appropriate
+                safeguards for international transfers, including Standard Contractual Clauses
+                where required by the GDPR.
+            </p>
+        </section>
+
+        <!-- 10. DELETE DATA -->
+        <section>
+            <h2>Delete Your Personal Data</h2>
+            <p>
+                Since I do not directly store your personal data, deletion requests should be
+                directed to the relevant third-party platform:
+            </p>
+            <ul>
+                <li>Strava: Settings → My Apps → Revoke access, or contact Strava support</li>
+                <li>Garmin: Garmin Connect account settings → Connected Apps</li>
+                <li>TMDB: Your TMDB account settings</li>
+                <li>Google: <a href="https://myaccount.google.com/data-and-privacy" target="_blank"
+                        rel="noopener noreferrer">myaccount.google.com/data-and-privacy</a></li>
+            </ul>
+            <p>
+                You are also welcome to contact me directly and I will assist where possible.
+            </p>
+        </section>
+
+        <!-- 11. YOUR RIGHTS -->
+        <section>
+            <h2>Your Rights</h2>
+            <p>
+                Depending on your location, you may have rights regarding your personal data.
+                If you are located in the <strong>European Economic Area</strong> or the
+                <strong>United Kingdom</strong>, under the GDPR and applicable data protection
+                laws, these rights may include:
+            </p>
+            <ul>
+                <li>The right to access personal data held about you</li>
+                <li>The right to request correction or deletion of your data</li>
+                <li>The right to object to or restrict certain types of processing</li>
+                <li>The right to data portability</li>
+                <li>The right to lodge a complaint with a supervisory authority in your country</li>
+            </ul>
+            <p>
+                Since most data is held by third-party providers, requests should primarily be
+                directed to them. However, you are welcome to contact me and I will assist
+                where possible. I will respond within 30 days.
+            </p>
+        </section>
+
+        <!-- 12. CHILDREN -->
+        <section>
+            <h2>Children's Privacy</h2>
+            <p>
+                The Apps and the Site are not directed at children under the age of 16.
+                I do not knowingly collect personally identifiable information from anyone under 16.
+                If you are a parent or guardian and believe your child has provided personal data
+                through the Service, please contact me and I will take steps to address it.
+            </p>
+        </section>
+
+        <!-- 13. EXTERNAL LINKS -->
+        <section>
+            <h2>Links to Other Websites</h2>
+            <p>
+                The Apps may open links to third-party websites in an external browser. I have no
+                control over and assume no responsibility for the content or privacy practices of
+                those sites. I encourage you to review the privacy policy of any external site you visit.
+            </p>
+        </section>
+
+        <!-- 14. SECURITY -->
+        <section>
+            <h2>Security</h2>
+            <p>
+                I rely on the security infrastructure of Google, Strava, Garmin, and TMDB for the
+                processing done through their respective services. Authentication tokens are stored
+                locally on your device. No method of electronic storage or transmission is 100%
+                secure, and I cannot guarantee absolute security.
+            </p>
+        </section>
+
+        <!-- 15. CHANGES -->
+        <section>
+            <h2>Changes to This Policy</h2>
+            <p>
+                I may update this Privacy Policy from time to time, for example when new
+                third-party integrations are added to the Apps. When I do, I will revise the
+                "Last updated" date at the top of this page. Continued use of the Service after
+                changes are posted constitutes your acceptance of the updated policy.
+            </p>
+        </section>
+
+        <!-- 16. CONTACT -->
+        <section>
+            <h2>Contact</h2>
+            <p>If you have any questions or concerns about this Privacy Policy, you can contact me:</p>
+            <ul>
+                <li>Email: <a href="mailto:gimena@gcraft.com.ar">gimena@gcraft.com.ar</a></li>
+                <li>Website: <a href="https://gcraft.com.ar">gcraft.com.ar</a></li>
+            </ul>
+        </section>
+
+    </main>
+
+    <footer>
+        <span>© 2026 Gimena · gcraft.com.ar</span>
+        <span>Privacy Policy</span>
+    </footer>
+
+</body>
+
+</html>
